@@ -332,3 +332,13 @@
 /home/caf/Documents/dotnet_prj/scoreboard/obj/Debug/net6.0/linux-x64/ref/scoreboard.dll
 /home/caf/Documents/dotnet_prj/scoreboard/obj/Debug/net6.0/linux-x64/scoreboard.pdb
 /home/caf/Documents/dotnet_prj/scoreboard/obj/Debug/net6.0/linux-x64/scoreboard.genruntimeconfig.cache
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/Microsoft.Data.Sqlite.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/Microsoft.EntityFrameworkCore.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/Microsoft.EntityFrameworkCore.Relational.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/Microsoft.EntityFrameworkCore.Sqlite.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/Microsoft.Extensions.DependencyModel.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/SQLitePCLRaw.batteries_v2.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/SQLitePCLRaw.core.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/SQLitePCLRaw.provider.e_sqlite3.dll
+/home/caf/Documents/dotnet_prj/scoreboard/bin/Debug/net6.0/linux-x64/libe_sqlite3.so

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6LBstLZRVi8jKAQEWIAbGmYtmp9dakc1WmrB40LB8O1L0Q0EoJIshr8Q8pJ5lewPXZ+RwyDz+FMRtvK2E10oaQ==",
+  "dgSpecHash": "JluavJT9iGesP3QG9zsbiZ29jUGop+STo2cNe4c7bpytXCTMp6kEWByMz7bKOoPVM1zB6grc2BybtMQk+Ge9bg==",
   "success": true,
   "projectFilePath": "/home/caf/Documents/dotnet_prj/scoreboard/scoreboard.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,6 @@
     "/home/caf/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/caf/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
     "/home/caf/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512",
-    "/home/caf/.nuget/packages/microsoft.netcore.app.ref/6.0.0/microsoft.netcore.app.ref.6.0.0.nupkg.sha512",
     "/home/caf/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/6.0.0/microsoft.netcore.app.runtime.linux-x64.6.0.0.nupkg.sha512",
     "/home/caf/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.0/microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512",
     "/home/caf/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/6.0.0/microsoft.aspnetcore.app.runtime.linux-x64.6.0.0.nupkg.sha512",

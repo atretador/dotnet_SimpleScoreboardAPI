@@ -1785,10 +1785,6 @@
             "version": "[6.0.0, 6.0.0]"
           },
           {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.0, 6.0.0]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.linux-x64",
             "version": "[6.0.0, 6.0.0]"
           }
