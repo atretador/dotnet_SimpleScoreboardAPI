@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IScoreRepository, ScoreRepository>();
-builder.Services.AddDbContext<ScoreContext>(o=>o.UseSqlite("conection string"));
+builder.Services.AddDbContext<ScoreContext>(o=>o.UseSqlite("conection string")); //connection string to your database, modify as required
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -25,8 +25,8 @@ namespace scoreboard.Models
         }
 
         [HttpGet("{quantity}")]
-        public async Task<ActionResult<List<ScoreData>>> GetTopNScore(int amount){
-            return await _scoreboard.Get(amount);
+        public async Task<ActionResult<List<ScoreData>>> GetTopNScore(int quantity){
+            return await _scoreboard.Get(quantity);
         }
     }
 }
