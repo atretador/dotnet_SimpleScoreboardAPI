@@ -5,5 +5,7 @@ Just modify the Program.cs file with your connection string and database provide
 
 
 /GET will return top 10 results
+
 /GET/{int} allows you to set the returned amout, top results
+
 /POST to add new score
