@@ -13,19 +13,23 @@ namespace scoreboard.Models
     {
         private readonly IScoreRepository _scoreboard;
 
+        public ScoreboardController(IScoreRepository scoreRepository){
+            _scoreboard = scoreRepository;
+        }
+
         [HttpPost]
-        public async Task<ActionResult<ScoreData>> PostScore([FromBody] ScoreData scoreData){
+        public async Task<ActionResult<Score>> PostScore([FromBody] Score scoreData){
             var _score = await _scoreboard.Create(scoreData);
             return NoContent();
         }
 
         [HttpGet]
-        public async Task<IEnumerable<ScoreData>> GetHighestScore(){
+        public async Task<IEnumerable<Score>> GetHighestScore(){
             return await _scoreboard.Get();
         }
 
         [HttpGet("{quantity}")]
-        public async Task<ActionResult<List<ScoreData>>> GetTopNScore(int quantity){
+        public async Task<ActionResult<List<Score>>> GetTopNScore(int quantity){
             return await _scoreboard.Get(quantity);
         }
     }

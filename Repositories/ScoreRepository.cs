@@ -13,30 +13,24 @@ namespace scoreboard.Repositories
         public ScoreRepository(ScoreContext context){
             _context = context;
         }
-        public async Task<List<ScoreData>> Get(){
+        public async Task<List<Score>> Get(){
             var data = (from sc in _context.Scores
             where sc.score > 0
-            orderby sc.score
+            orderby sc.score descending
             select sc).Take(10);
-
-            List<ScoreData> scores = new List<ScoreData>();
-            data.ToList().ConvertAll(x => new ScoreData(x));
-            return scores;
+            return data.ToList();
         }
 
-        public async Task<List<ScoreData>> Get(int highest){
+        public async Task<List<Score>> Get(int highest){
             var data = (from sc in _context.Scores
             where sc.score > 0
-            orderby sc.score
+            orderby sc.score descending
             select sc).Take(highest);
-            List<ScoreData> scores = new List<ScoreData>();
-            data.ToList().ConvertAll(x => new ScoreData(x));
-            return scores;
+            return data.ToList();
         }
 
-        public async Task<ScoreData> Create(ScoreData score){
-            Score _score = new Score(score); 
-            _context.Scores.Add(_score);
+        public async Task<Score> Create(Score score){
+            _context.Scores.Add(score);
             await _context.SaveChangesAsync();
             return score;
         }

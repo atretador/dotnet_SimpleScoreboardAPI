@@ -12,5 +12,11 @@ namespace scoreboard.Models
             : base(options) => Database.EnsureCreated();
 
         public DbSet<Score> Scores { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Score>()
+                .Property<int>("id");
+        }
     }
 }
