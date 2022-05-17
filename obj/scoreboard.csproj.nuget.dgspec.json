@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/caf/Documents/dotnet_prj/scoreboard/scoreboard.csproj": {}
+    "/home/atretador/DATA2_SLOW/Documents/dotnet_prj/scoreboard/scoreboard.csproj": {}
   },
   "projects": {
-    "/home/caf/Documents/dotnet_prj/scoreboard/scoreboard.csproj": {
+    "/home/atretador/DATA2_SLOW/Documents/dotnet_prj/scoreboard/scoreboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/caf/Documents/dotnet_prj/scoreboard/scoreboard.csproj",
+        "projectUniqueName": "/home/atretador/DATA2_SLOW/Documents/dotnet_prj/scoreboard/scoreboard.csproj",
         "projectName": "scoreboard",
-        "projectPath": "/home/caf/Documents/dotnet_prj/scoreboard/scoreboard.csproj",
-        "packagesPath": "/home/caf/.nuget/packages/",
-        "outputPath": "/home/caf/Documents/dotnet_prj/scoreboard/obj/",
+        "projectPath": "/home/atretador/DATA2_SLOW/Documents/dotnet_prj/scoreboard/scoreboard.csproj",
+        "packagesPath": "/home/atretador/.nuget/packages/",
+        "outputPath": "/home/atretador/DATA2_SLOW/Documents/dotnet_prj/scoreboard/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/caf/.nuget/NuGet/NuGet.Config"
+          "/home/atretador/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.27.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -45,6 +49,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.5.61, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -63,20 +71,12 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.0, 6.0.0]"
-            },
-            {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-              "version": "[6.0.0, 6.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[6.0.0, 6.0.0]"
+              "version": "[6.0.5, 6.0.5]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.linux-x64",
-              "version": "[6.0.0, 6.0.0]"
+              "version": "[6.0.5, 6.0.5]"
             }
           ],
           "frameworkReferences": {
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
