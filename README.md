@@ -1,7 +1,8 @@
 # dotnet_SimpleScoreboardAPI
-Simple Scoreboard REST API using dotnet core with EntityFramework
+Simple Scoreboard REST API using dotnet 8 with EntityFramework
 
-Just modify the Program.cs file with your connection string and database provider, or run with the default Sqlite implementation.
+Just modify the appsettings.json file with your connection string and database provider.
+Azure deployment files are also included for cloud usage.
 
 
 /GET will return top 10 results
