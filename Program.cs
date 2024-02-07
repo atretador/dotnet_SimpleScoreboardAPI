@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using scoreboard.Repositories;
+using scoreboard.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

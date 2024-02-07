@@ -4,8 +4,8 @@ namespace scoreboard.Repositories
 {
     public interface IScoreRepository
     {
-        Task<List<Score>> Get();
-        Task<List<Score>> Get(int top);
-        Task<Score> Create(Score score);
+        Task<List<UserScore>> Get();
+        Task<List<UserScore>> Get(int top);
+        Task<UserScore> Create(UserScore score);
     }
 }

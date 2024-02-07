@@ -5,15 +5,13 @@ namespace scoreboard.Models
     public class ScoreContext : DbContext
     {
         public ScoreContext(DbContextOptions<ScoreContext> options)
-            : base(options)
-        {
-        }
+            : base(options) => Database.EnsureCreated();
 
-        public DbSet<Score> Scores { get; set; }
+        public DbSet<UserScore> Scores { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Score>()
+            modelBuilder.Entity<UserScore>()
                 .Property<int>("id");
         }
     }

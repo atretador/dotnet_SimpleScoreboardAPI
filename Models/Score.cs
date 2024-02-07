@@ -1,8 +1,8 @@
 namespace scoreboard.Models
 {
-    public class Score
+    public class UserScore : Entity
     {
-        public string name {get;set;}
-        public int score {get;set;}
+        public string Name { get; set; }
+        public int Score { get; set; }
     }
 }

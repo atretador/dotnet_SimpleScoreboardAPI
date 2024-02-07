@@ -4,15 +4,15 @@ variable "location" {
 }
 
 variable "resource_group_name" {
-  default = "my-resource-group"  # Change to your desired resource group name
+  default = "scoreboard-rg"  # Change to your desired resource group name
 }
 
 variable "app_name" {
-  default = "my-web-app"  # Change to your desired web app name
+  default = "scoreboard"  # Change to your desired web app name
 }
 
 variable "sql_server_name" {
-  default = "my-sql-server"  # Change to your desired SQL server name
+  default = "sqlserver"  # Change to your desired SQL server name
 }
 
 variable "sql_database_name" {
@@ -20,9 +20,9 @@ variable "sql_database_name" {
 }
 
 variable "admin_username" {
-  default = "adminuser"  # Change to your desired admin username for SQL server
+  default = "ruut"  # Change to your desired admin username for SQL server
 }
 
 variable "admin_password" {
-  default = "Password123!"  # Change to your desired admin password for SQL server
+  default = "18d$^*hfa&01kda1"  # Change to your desired admin password for SQL server
 }

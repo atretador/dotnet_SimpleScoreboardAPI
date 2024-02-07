@@ -16,7 +16,7 @@ namespace scoreboard.Models
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostScore([FromBody] Score scoreData)
+        public async Task<IActionResult> PostScore([FromBody] UserScore scoreData)
         {
             if (scoreData == null)
             {

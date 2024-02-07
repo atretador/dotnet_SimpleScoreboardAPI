@@ -1,12 +1,12 @@
 # Define Azure SQL Server
 resource "azurerm_sql_server" "scoreboard_sql_server" {
-  name                         = "scoreboard-sql-server"
+  name                         = var.sql_server_name
   resource_group_name          = azurerm_resource_group.scoreboard_rg.name
   location                     = azurerm_resource_group.scoreboard_rg.location
   version                      = "12.0"
-  administrator_login          = "sqladmin"
-  administrator_login_password = "Password123!" # Replace with your password
-
+  administrator_login          = var.admin_username
+  administrator_login_password = var.admin_password
+  
   tags = {
     environment = "production"
   }
@@ -14,7 +14,7 @@ resource "azurerm_sql_server" "scoreboard_sql_server" {
 
 # Define Azure SQL Database
 resource "azurerm_sql_database" "scoreboard_database" {
-  name                = "scoreboard-db"
+  name                = var.sql_database_name
   resource_group_name = azurerm_resource_group.scoreboard_rg.name
   server_name         = azurerm_sql_server.scoreboard_sql_server.name
   edition             = "Standard"

@@ -16,7 +16,7 @@ namespace scoreboard.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<List<Score>> Get()
+        public async Task<List<UserScore>> Get()
         {
             try
             {
@@ -32,7 +32,7 @@ namespace scoreboard.Repositories
             }
         }
 
-        public async Task<List<Score>> Get(int highest)
+        public async Task<List<UserScore>> Get(int highest)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace scoreboard.Repositories
             }
         }
 
-        public async Task<Score> Create(Score score)
+        public async Task<UserScore> Create(UserScore score)
         {
             if (score == null)
             {
