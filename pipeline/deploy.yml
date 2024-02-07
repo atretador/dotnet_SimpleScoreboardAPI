@@ -17,6 +17,8 @@ parameters:
 variables:
   - group: "{your-variables}"
 
+## reference: https://www.mediaglasses.blog/2021/06/08/azure-devops-terraform-pipeline-with-checkov-approvals/
+
 stages:
 - ${{ if parameters.runCheckov }}:
   - stage: "Checkov"
