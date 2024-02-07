@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("scoreboard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+388ebf96c001b0cebf1e522f274e630c0fe21d04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f977809f852171a566df57d9295f26352a9a833")]
 [assembly: System.Reflection.AssemblyProductAttribute("scoreboard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("scoreboard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
