@@ -234,18 +234,33 @@ stages:
               environmentServiceName: "$(SUBSCRIPTION_NAME)"
             displayName: "Run > terraform apply"
 
-  - stage: "Deply App"
-    jobs:
-      - job:
-        steps:
+- stage: "Deploy App"
+  displayName: "Deploy App"
+  dependsOn: "Deploy Infrastructure"
+  jobs:
+    - job: "deployApp"
+      displayName: "Deploy App"
+      steps:
+        - task: DownloadPipelineArtifact@2
+          displayName: 'Download artifact'
+          inputs:
+            artifactName: 'drop'
+            path: $(Pipeline.Workspace)/drop
+
         - task: DotNetCoreCLI@2
+          displayName: 'Publish application'
           inputs:
             command: 'publish'
             publishWebProjects: true
+            projects: '**/*.csproj'
             arguments: '--configuration Release --output $(build.artifactstagingdirectory)'
             zipAfterPublish: true
 
-        - task: PublishPipelineArtifact@1
+        - task: AzureRmWebAppDeployment@4
+          displayName: 'Deploy to Azure App Service'
           inputs:
-            targetPath: '$(build.artifactstagingdirectory)'
-            artifactName: 'drop'
+            ConnectionType: 'AzureRM'
+            azureSubscription: "$(SUBSCRIPTION_NAME)"
+            appType: 'webAppLinux'
+            WebAppName: "$(appName)"
+            packageForLinux: '$(Pipeline.Workspace)/drop/**/*.zip'
