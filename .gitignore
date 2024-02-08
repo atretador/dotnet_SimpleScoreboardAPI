@@ -44,3 +44,10 @@ paket-files/
 # Misc
 nuget.exe
 *.DS_Store
+obj/Debug/net8.0/linux-x64/scoreboard.AssemblyInfo.cs
+obj/Debug/net8.0/linux-x64/scoreboard.AssemblyInfoInputs.cache
+obj/Debug/net8.0/linux-x64/scoreboard.dll
+obj/Debug/net8.0/linux-x64/scoreboard.pdb
+obj/Debug/net8.0/linux-x64/scoreboard.sourcelink.json
+obj/Debug/net8.0/linux-x64/ref/scoreboard.dll
+obj/Debug/net8.0/linux-x64/refint/scoreboard.dll

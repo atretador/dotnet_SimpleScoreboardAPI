@@ -18,6 +18,7 @@ variables:
   - group: "{your-variables}"
 
 ## reference: https://www.mediaglasses.blog/2021/06/08/azure-devops-terraform-pipeline-with-checkov-approvals/
+## fill all required $var_Name on a config file, parameter or library
 
 stages:
 - ${{ if parameters.runCheckov }}:
@@ -42,7 +43,7 @@ stages:
             failTaskOnFailedTests: false
             testResultsFormat: "JUnit"
             testResultsFiles: "CheckovReport.xml"
-            searchFolder: "$(System.DefaultWorkingDirectory)"
+            searchFolder: "$(tf_dir)"
           displayName: "Publish > Checkov scan results"
 
 - ${{ if parameters.runTerraformDeployment }}:
@@ -63,6 +64,7 @@ stages:
           - task: TerraformCLI@0
             inputs:
               command: "init"
+              workingDirectory: '$(tf_dir)'
               backendType: "azurerm"
               backendServiceArm: "$(SUBSCRIPTION_NAME)"
               ensureBackend: true
@@ -96,6 +98,7 @@ stages:
           - task: TerraformCLI@0
             inputs:
               command: "init"
+              workingDirectory: '$(tf_dir)'
               backendType: "azurerm"
               backendServiceArm: "$(SUBSCRIPTION_NAME)"
               ensureBackend: true
@@ -110,9 +113,10 @@ stages:
           - task: TerraformCLI@0
             inputs:
               command: "plan"
+              workingDirectory: '$(tf_dir)'
               environmentServiceName: "$(SUBSCRIPTION_NAME)"
               publishPlanResults: "PlanResults"
-              commandOptions: "-out=$(System.DefaultWorkingDirectory)/terraform.tfplan -detailed-exitcode"
+              commandOptions: "-out=$(System.DefaultWorkingDirectory)/terraform/terraform.tfplan -detailed-exitcode"
             name: "plan"
             displayName: "Run > terraform plan"
 
@@ -165,6 +169,7 @@ stages:
           - task: TerraformCLI@0
             inputs:
               command: "init"
+              workingDirectory: '$(tf_dir)'
               backendType: "azurerm"
               backendServiceArm: "$(SUBSCRIPTION_NAME)"
               ensureBackend: true
@@ -179,6 +184,7 @@ stages:
           - task: TerraformCLI@0
             inputs:
               command: "apply"
+              workingDirectory: '$(tf_dir)'
               environmentServiceName: "$(SUBSCRIPTION_NAME)"
             displayName: "Run > terraform apply"
 
@@ -219,6 +225,7 @@ stages:
           - task: TerraformCLI@0
             inputs:
               command: "init"
+              workingDirectory: '$(tf_dir)'
               backendType: "azurerm"
               backendServiceArm: "$(SUBSCRIPTION_NAME)"
               ensureBackend: true
@@ -233,6 +240,7 @@ stages:
           - task: TerraformCLI@0
             inputs:
               command: "apply"
+              workingDirectory: '$(tf_dir)'
               environmentServiceName: "$(SUBSCRIPTION_NAME)"
             displayName: "Run > terraform apply"
 
