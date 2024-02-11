@@ -49,8 +49,6 @@ stages:
 - ${{ if parameters.runTerraformDeployment }}:
   - stage: "validateTerraform"
     displayName: "Terraform - Validate"
-    dependsOn:
-      - "runCheckov"
     jobs:
       - job: "TerraformJobs"
         displayName: "Terraform > install, init and validate"
